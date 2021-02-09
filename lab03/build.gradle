@@ -1,0 +1,34 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+buildscript {
+	repositories {
+		flatDir dirs: "../proguard-7.0.1/lib"
+	}
+	dependencies {
+		classpath ':proguard:'
+	}
+}
+
+jar.baseName = 'customLab3Name'
+
+application {
+	mainClassName = 'csci2020u.lab02.CSVDemo'
+}
+
+repositories {
+	mavenCentral()
+	
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+	implementation "org.apache.commons:commons-csv:1.8"
+}
+
+task proguarda(type: proguard.gradle.ProGuardTask){
+injars '/build/libs/customLab3Name.jar'
+outjars 'proguard_out.jar'
+}
