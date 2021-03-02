@@ -1,0 +1,43 @@
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="1000" vgap="1000">
+
+    <TableView fx:id = "tblMain" GridPane.columnIndex="0" GridPane.rowIndex="0">
+        <columns>
+            <TableColumn text="SID">
+                <cellValueFactory>
+                    <PropertyValueFactory property="ID" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Assignments">
+                <cellValueFactory>
+                    <PropertyValueFactory property="assignments" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Midterm">
+                <cellValueFactory>
+                    <PropertyValueFactory property="midterm" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Final Exam">
+                <cellValueFactory>
+                    <PropertyValueFactory property="finalExam" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Final Mark">
+                <cellValueFactory>
+                    <PropertyValueFactory property="finalMark" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Letter Grade">
+                <cellValueFactory>
+                    <PropertyValueFactory property="letterGrade" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+</GridPane>
