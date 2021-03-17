@@ -68,7 +68,7 @@ public class Main extends Application {
                         new PieChart.Data("65+", 2247));
 
         final PieChart chart2 = new PieChart(pieChartData);
-        chart2.setTitle("Imported Fruits");
+        chart2.setTitle("purchase by age group");
 
 
 
@@ -76,7 +76,7 @@ public class Main extends Application {
         FlowPane pane = new FlowPane(chart1, chart2);
 
         //Scene scene  = new Scene(chart1,800,600);
-        Scene scene  = new Scene(pane,800,600);
+        Scene scene  = new Scene(pane,1000,600);
         //((Group) scene.getRoot()).getChildren().add(chart);//ghvvvvvvvvvvvv
         chart1.getData().addAll(series1, series2);
         stage.setScene(scene);
